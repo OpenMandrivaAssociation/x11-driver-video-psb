@@ -15,6 +15,8 @@
 # act as if we don't use mmListEmpty and other drm functions...
 %define _disable_ld_no_undefined 1
 
+%define _enable_libtoolize 1
+
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
@@ -41,6 +43,8 @@ The X.org driver for the video chipset from the Poulsbo SCH.
 # inline drm.pc and xf86driproto.pc flags to use libdrm-psb instead
 export DRI_CFLAGS="-I%{_includedir}/libdrm-psb -I%{_includedir}/libdrm-psb/drm -I%{_includedir}/X11/dri"
 export DRI_LIBS="-L%{_libdir}/libdrm-psb -ldrm"
+# regenerate not to build EXA fork (not necessary for Xorg server >= 1.4.99)
+autoreconf -v --install
 %configure2_5x
 %make
 
