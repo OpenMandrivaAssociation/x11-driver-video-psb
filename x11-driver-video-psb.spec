@@ -52,10 +52,6 @@ autoreconf -v --install
 rm -rf %{buildroot}
 %makeinstall_std
 
-# custom libexa is not needed for xorg > 1.3
-rm -f %{buildroot}%{_libdir}/xorg/modules/libexa.*
-rm -f %{buildroot}%{_mandir}/man4/exa.*
-
 %clean
 rm -rf %{buildroot}
 
