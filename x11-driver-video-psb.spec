@@ -50,7 +50,7 @@ autoreconf -v --install
 
 %install
 rm -rf %{buildroot}
-%makeinstall_std
+%makeinstall_std DRIVER_MAN_DIR=%{_mandir}/man4
 
 %clean
 rm -rf %{buildroot}
