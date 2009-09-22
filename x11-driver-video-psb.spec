@@ -1,7 +1,7 @@
 %define name		x11-driver-video-%{chipset}
 %define chipset		psb
 %define snapshot	0
-%define version		0.29.0
+%define version		0.31.0
 %if %snapshot
 %define release		%mkrel 0.%{snapshot}.1
 %define sname		xf86-video-%{chipset}-%{snapshot}
@@ -9,7 +9,7 @@
 %else
 %define release		%mkrel 1
 %define sname		xserver-xorg-video-%{chipset}_%{version}
-%define dname		xf86-video-%{chipset}
+%define dname		xserver-xorg-video-%{chipset}-%{version}
 %endif
 
 # act as if we don't use mmListEmpty and other drm functions...
