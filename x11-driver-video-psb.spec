@@ -7,7 +7,7 @@
 %define sname		xf86-video-%{chipset}-%{snapshot}
 %define dname		%{distname}
 %else
-%define release		%mkrel 3
+%define release		%mkrel 4
 %define sname		xserver-xorg-video-%{chipset}_%{version}
 %define dname		xserver-xorg-video-%{chipset}-%{version}
 %endif
@@ -35,6 +35,7 @@ BuildRequires:	libdrm-psb-devel
 BuildRequires:	GL-devel
 Requires:	libdrm-%{chipset}
 Requires:	kmod(%{chipset})
+Suggests:	x11-driver-video-psb-binary-blobs
 
 %description
 The X.org driver for the video chipset from the Poulsbo SCH.
