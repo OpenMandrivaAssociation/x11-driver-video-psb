@@ -7,7 +7,7 @@
 %define sname		xf86-video-%{chipset}-%{snapshot}
 %define dname		%{distname}
 %else
-%define release		%mkrel 4
+%define release		%mkrel 5
 %define sname		xserver-xorg-video-%{chipset}_%{version}
 %define dname		xserver-xorg-video-%{chipset}-%{version}
 %endif
@@ -27,6 +27,7 @@ URL:		http://git.moblin.org/cgit.cgi/deprecated/xf86-video-psb/
 # DATE=20081006; git archive --format=tar --prefix=xf86-video-psb-$DATE/ origin/GASTON | gzip > xf86-video-psb-$DATE.tar.gz
 Source:		%{sname}.tar.gz
 Patch0:		xorg-x11-drv-psb-0.31.0-ignoreacpi.patch
+Patch1:		xserver-xorg-video-psb-0.31.0-greedy.patch
 License:	MIT
 BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	x11-proto-devel
@@ -43,6 +44,7 @@ The X.org driver for the video chipset from the Poulsbo SCH.
 %prep
 %setup -q -n %{dname}
 %patch0 -p1 -b .ignoreACPI
+%patch1 -p1 -b .greedy
 
 %build
 # inline drm.pc and xf86driproto.pc flags to use libdrm-psb instead
