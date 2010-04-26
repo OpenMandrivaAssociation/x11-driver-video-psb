@@ -12,9 +12,6 @@
 %define dname		xserver-xorg-video-%{chipset}-%{version}
 %endif
 
-# act as if we don't use mmListEmpty and other drm functions...
-%define _disable_ld_no_undefined 1
-
 %define _enable_libtoolize 1
 
 Name:		%{name}
