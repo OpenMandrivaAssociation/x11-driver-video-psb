@@ -15,9 +15,6 @@
 # act as if we don't use mmListEmpty and other drm functions...
 %define _disable_ld_no_undefined 1
 
-# we want libmm.so
-%define _disable_ld_as_needed 1
-
 %define _enable_libtoolize 1
 
 Name:		%{name}
