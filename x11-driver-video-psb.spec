@@ -60,7 +60,7 @@ The X.org driver for the video chipset from the Poulsbo SCH.
 %build
 # inline drm.pc and xf86driproto.pc flags to use libdrm-psb instead
 export DRI_CFLAGS="-I%{_includedir}/libdrm-psb -I%{_includedir}/libdrm-psb/drm -I%{_includedir}/X11/dri"
-export DRI_LIBS="-L%{_libdir}/libdrm-psb -ldrm"
+export LDFLAGS="-L%{_libdir}/libdrm-psb -ldrm"
 # regenerate not to build EXA fork (not necessary for Xorg server >= 1.4.99)
 autoreconf -v --install
 %configure2_5x
