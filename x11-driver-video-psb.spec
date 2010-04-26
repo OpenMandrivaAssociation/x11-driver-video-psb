@@ -63,6 +63,8 @@ export DRI_CFLAGS="-I%{_includedir}/libdrm-psb -I%{_includedir}/libdrm-psb/drm -
 export LDFLAGS="-L%{_libdir}/libdrm-psb -ldrm"
 # regenerate not to build EXA fork (not necessary for Xorg server >= 1.4.99)
 autoreconf -v --install
+# change visibility back to default so that psb can find mmCreateDRM in libmm
+export CFLAGS="%optflags -fvisibility=default"
 %configure2_5x
 %make
 
