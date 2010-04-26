@@ -7,7 +7,7 @@
 %define sname		xf86-video-%{chipset}-%{snapshot}
 %define dname		%{distname}
 %else
-%define release		%mkrel 6
+%define release		%mkrel 7
 %define sname		xserver-xorg-video-%{chipset}_%{version}
 %define dname		xserver-xorg-video-%{chipset}-%{version}
 %endif
