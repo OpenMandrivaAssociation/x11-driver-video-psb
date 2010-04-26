@@ -34,6 +34,7 @@ Patch1:		xserver-xorg-video-psb-0.31.0-greedy.patch
 Patch2:		xorg-x11-drv-psb-0.31.0-xserver17.patch
 Patch3:		xserver-xorg-video-psb-0.31.0-loader.patch
 Patch4:		xserver-xorg-video-psb-0.31.0-comment_unused.patch
+Patch5:		xserver-xorg-video-psb-0.31.0-assert.patch
 License:	MIT
 BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	x11-proto-devel
@@ -54,6 +55,7 @@ The X.org driver for the video chipset from the Poulsbo SCH.
 %patch2 -p1 -b .xserver17
 %patch3 -p1 -b .loader
 %patch4 -p1 -b .comment_unused
+%patch5 -p1 -b .assert
 
 %build
 # inline drm.pc and xf86driproto.pc flags to use libdrm-psb instead
