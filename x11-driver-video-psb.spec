@@ -3,11 +3,11 @@
 %define snapshot	0
 %define version		0.31.0
 %if %snapshot
-%define release		%mkrel 0.%{snapshot}.1
+%define release		%mkrel 0.%{snapshot}.2
 %define sname		xf86-video-%{chipset}-%{snapshot}
 %define dname		%{distname}
 %else
-%define release		%mkrel 7
+%define release		%mkrel 8
 %define sname		xserver-xorg-video-%{chipset}_%{version}
 %define dname		xserver-xorg-video-%{chipset}-%{version}
 %endif
