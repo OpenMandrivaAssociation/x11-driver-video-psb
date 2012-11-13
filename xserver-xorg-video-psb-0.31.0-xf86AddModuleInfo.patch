@@ -1,0 +1,16 @@
+diff -p -up xserver-xorg-video-psb-0.31.0/src/psb_driver.c.xf86AddModuleInfo xserver-xorg-video-psb-0.31.0/src/psb_driver.c
+--- xserver-xorg-video-psb-0.31.0/src/psb_driver.c.xf86AddModuleInfo	2010-04-26 15:09:50.000000000 +0200
++++ xserver-xorg-video-psb-0.31.0/src/psb_driver.c	2010-04-26 15:10:45.000000000 +0200
+@@ -636,6 +636,12 @@ psbPreInitDRI(ScrnInfoPtr pScrn)
+     return TRUE;
+ }
+ 
++/* removed in Xserver 1.7, add it again so that proprietary Xpsb can be loaded */
++void
++xf86AddModuleInfo(pointer info, pointer module)
++{
++}
++
+ static Bool
+ psbPreInitXpsb(ScrnInfoPtr pScrn)
+ {
