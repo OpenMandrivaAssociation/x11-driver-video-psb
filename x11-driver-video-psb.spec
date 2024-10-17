@@ -19,7 +19,7 @@ Version:	%{version}
 Release:	%{release}
 Summary:	The X.org driver for Poulsbo chipsets
 Group:		System/X11
-URL:		http://git.moblin.org/cgit.cgi/deprecated/xf86-video-psb/
+URL:		https://git.moblin.org/cgit.cgi/deprecated/xf86-video-psb/
 # http://moblin.org/repos/projects/xf86-video-psb.git
 # DATE=20081006; git archive --format=tar --prefix=xf86-video-psb-$DATE/ origin/GASTON | gzip > xf86-video-psb-$DATE.tar.gz
 Source:		%{sname}.tar.gz
