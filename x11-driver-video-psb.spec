@@ -33,6 +33,11 @@ Patch5:		xserver-xorg-video-psb-0.31.0-assert.patch
 Patch6:		xserver-xorg-video-psb-0.31.0-xf86AddModuleInfo.patch
 License:	MIT
 BuildRoot:	%{_tmppath}/%{name}-root
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	x11-proto-devel
 BuildRequires:	x11-server-devel
 BuildRequires:	libdrm-psb-devel
